@@ -1,0 +1,221 @@
+/* ======================================================= */
+/* === نسخه نهایی و یکپارچه فایل استایل - Instagram Tools === */
+/* ======================================================= */
+
+/* بخش ۱: استایل‌های پایه و پس‌زمینه گرادینت */
+/* ------------------------------------------- */
+
+/* استایل جدید برای پس‌زمینه گرادینت در صفحات افزونه */
+body.it-gradient-background {
+    background: linear-gradient(45deg, #4f59f9, #c906cc);
+    background-attachment: fixed; /* برای ثابت ماندن گرادینت هنگام اسکرول */
+}
+
+/* حذف پس‌زمینه خاکستری قبلی برای نمایان شدن گرادینت */
+.woocommerce-account .woocommerce {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+
+/* بخش ۲: استایل قاب آیفون (ارتفاع پویا) */
+/* -------------------------------------------------- */
+
+.iphone-mockup {
+    margin: 60px auto;
+    width: 390px;
+    position: relative;
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: min-height 0.4s ease-in-out;
+}
+
+.iphone-frame {
+    background: #1c1c1e;
+    border: 3px solid #4a4a4a;
+    border-radius: 60px;
+    padding: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.iphone-screen {
+    background: #fff;
+    width: 100%;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+.dynamic-island {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125px;
+    height: 35px;
+    background: #1c1c1e;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.iphone-content {
+    padding: 60px 20px 20px;
+    box-sizing: border-box;
+    color: #1d1d1f;
+}
+
+/* بخش ۳: استایل‌های فرم خرید (برای نمایش درون قاب) */
+/* ---------------------------------------------------- */
+
+#it-multi-step-form {
+    text-align: right;
+    direction: rtl;
+}
+
+.it-step {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.it-step:last-child { border-bottom: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+#it-multi-step-form h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#it-multi-step-form select,
+#it-multi-step-form input[type="text"],
+#it-multi-step-form input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#it-multi-step-form label {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#it-product-description {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0 15px 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+#it-product-description:empty { display: none; }
+
+#it-multi-step-form button {
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s ease;
+}
+#it-multi-step-form button:hover { opacity: 0.9; }
+
+#it-show-invoice-btn {
+    background-color: #4f59f9;
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+#it-show-invoice-btn:hover {
+    background-color: #c00cd0;
+    color: #fff;
+    opacity: 1;
+}
+
+#it-multi-step-form button[type="submit"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+#it-invoice-details { padding: 15px; background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; }
+#it-invoice-details p { display: flex; justify-content: space-between; margin: 0 0 8px 0; font-size: 14px; }
+#it-invoice-details hr { margin: 10px 0; border: 0; border-top: 1px solid #e9ecef; }
+
+
+/* بخش ۴: استایل‌های صفحه مشاهده سفارش */
+/* -------------------------------------- */
+.order-instagram-id { text-align: center; font-size: 28px; font-weight: 700; margin: 0 0 30px 0; color: #000; }
+.order-product-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; gap: 15px; }
+.product-text-details { flex: 1; text-align: right; }
+.product-title { font-size: 20px; font-weight: 600; margin: 0 0 8px 0; }
+.product-image-wrapper { flex-shrink: 0; width: 100px; height: 100px; }
+.product-image-wrapper img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #f5f5f7; }
+.order-details-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid #e5e5e5; }
+.order-details-list li { display: flex; justify-content: space-between; align-items: center; padding: 18px 5px; border-bottom: 1px solid #e5e5e5; font-size: 16px; }
+.order-details-list .label { font-weight: 500; color: #333; }
+.order-details-list .value { font-weight: 600; color: #000; }
+.order-footer-action { text-align: center; margin-top: 30px; }
+.back-to-orders-button { display: inline-block; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 500; font-size: 15px; cursor: pointer; border: none; color: #fff; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); transition: opacity 0.2s ease-in-out; }
+.back-to-orders-button:hover { opacity: 0.9; }
+.status-badge { display: inline-block; padding: 5px 12px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: 500; min-width: 80px; text-align: center; }
+.status-badge.status-completed { background-color: #28a745; }
+.status-badge.status-processing { background-color: #ffc107; color: #212529; }
+.status-badge.status-cancelled, .status-badge.status-failed { background-color: #dc3545; }
+.status-badge.status-on-hold, .status-badge.status-pending, .status-badge.status-refunded { background-color: #6c757d; }
+
+
+/* بخش ۵: استایل‌های پاپ‌آپ موفقیت */
+/* --------------------------------- */
+#it-success-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 99999; opacity: 0; transition: opacity 0.3s ease; }
+#it-success-popup-box { background: #fff; padding: 30px 40px; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.2); text-align: center; max-width: 380px; transform: scale(0.9); transition: transform 0.3s ease; }
+#it-success-popup-overlay:not([style*="display: none"]) { opacity: 1; }
+#it-success-popup-overlay:not([style*="display: none"]) #it-success-popup-box { transform: scale(1); }
+.popup-title { font-size: 24px; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: #333; }
+.popup-message { font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 25px; }
+.popup-timer-bar { height: 5px; background-color: #e9ecef; border-radius: 5px; overflow: hidden; }
+.popup-timer-progress { height: 100%; width: 100%; background-color: #4CAF50; border-radius: 5px; animation: countdown 3s linear forwards; }
+@keyframes countdown { from { width: 100%; } to { width: 0%; } }
+.checkmark { width: 80px; height: 80px; border-radius: 50%; display: block; stroke-width: 3; stroke: #4CAF50; stroke-miterlimit: 10; margin: 0 auto; box-shadow: inset 0px 0px 0px #4CAF50; animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both; }
+.checkmark__circle { stroke-dasharray: 166; stroke-dashoffset: 166; stroke-width: 2; stroke-miterlimit: 10; stroke: #7ac142; fill: none; animation: stroke .6s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
+.checkmark__check { transform-origin: 50% 50%; stroke-dasharray: 48; stroke-dashoffset: 48; animation: stroke .3s cubic-bezier(0.65, 0, 0.45, 1) .8s forwards; }
+@keyframes stroke { 100% { stroke-dashoffset: 0; } }
+@keyframes scale { 0%, 100% { transform: none; } 50% { transform: scale3d(1.1, 1.1, 1); } }
+@keyframes fill { 100% { box-shadow: inset 0px 0px 0px 40px #7ac142; } }
+
+
+/* بخش ۶: کدهای رسپانسیو (برای نمایش قاب در موبایل) */
+/* ---------------------------------------------------- */
+@media (max-width: 480px) {
+    .iphone-mockup {
+        width: 95vw;
+        height: auto;
+        aspect-ratio: 390 / 844;
+        margin: 30px auto;
+    }
+    .order-instagram-id { font-size: 22px; margin-bottom: 20px; }
+    #it-multi-step-form h2 { font-size: 18px; }
+    .product-title { font-size: 16px; }
+    .product-description, #it-multi-step-form select, #it-multi-step-form input { font-size: 13px; }
+    .order-details-list li { padding: 14px 5px; font-size: 14px; }
+    #it-multi-step-form button, .back-to-orders-button { font-size: 14px; padding: 10px 20px; }
+    .product-image-wrapper { width: 80px; height: 80px; }
+}
